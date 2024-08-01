@@ -16,4 +16,4 @@ print(type(my_dict.values()))
 print(my_dict.values())
 
 print(type(my_dict.items()))
-print(list(my_dict.items()))
+print(my_dict.items())

@@ -1,18 +1,13 @@
-user_input=(input("Enter a values:"))
-fruits=[fruit.strip() for fruit in user_input.split(',')]
-print("1.enumerate")
-print(fruits)
-for index,fruit in enumerate(fruits):
-   print(f"index:{index},fruits:{fruit}")
+tuple1=(2,4,6,8,10)
 
-user_input=(input("Enter a value:"))
-vv=tuple(user_input)
-result=all(int(i) % 2 == 0 for i in vv)
-print("using all operator")
-print(f"All element are even:{result}")
+print("using all operator in tupple")
+result=all(num % 2 == 0 for num in tuple1)
+print("The result is using all operator:",result)
 
-user_input=(input("Enter a value:"))
-vv=list[user_input]
-print("using any operator")
-result=any(vv)
-print(f"Result using any:{result}")
+print("using any operator in tu")
+result1=any(num >= 5 for num in tuple1)
+print("The result is using any operator:",result1)
+
+print("using enumerate in tupple")
+result=tuple(enumerate(tuple1))
+print("The result is using enumerate operator:",result)

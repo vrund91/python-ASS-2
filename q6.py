@@ -5,7 +5,8 @@ DA=0.20*salary
 TA=0.10*salary
 PF=0.10*salary
 
-net_sal=salary-HRA-DA-TA-PF
+gross_salary = salary + HRA + DA + TA
+net_sal = gross_salary - PF
 
 print(f"Basic salary:{salary:.2f}")
 print(f"HRA:{HRA:.2f}")

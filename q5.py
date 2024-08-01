@@ -1,12 +1,10 @@
 number=input("Enter a three-digit number:")
+r = 0
+sum = 0
 
-if len(number)!=3 or not number.isdigit():
-    print("please enter three-digit number.")
-else:
-    digit1 = int(number[0])
-    digit2 = int(number[1])
-    digit3 = int(number[2])
-
-    total_sum = digit1 + digit2 + digit3
-
-print(f"The sum of digit is: {total_sum}")       
+while(num!=0):
+     r = num % 10
+     sum = sum + r
+     num = num//10
+    
+print("Sum of digits is:",sum)

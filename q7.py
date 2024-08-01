@@ -1,6 +1,6 @@
 user_input=(input("Enter a value:"))
 
-data=tuple(map(int,user_input.split(',')))
+data=tuple(map(int,user_input.split(',')))   #map is a function  all items in a list (or any iterable)
 
 max_val=max(data)
 
@@ -8,7 +8,7 @@ min_val=min(data)
 
 len_val=len(data)
 
-sorted_val=sorted(data)
+sorted_val=tuple(sorted(data))
 
 sum_val=sum(data)
 

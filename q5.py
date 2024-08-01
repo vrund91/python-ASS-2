@@ -1,4 +1,4 @@
-number=input("Enter a three-digit number:")
+num=int(input("Enter a three-digit number:"))
 r = 0
 sum = 0
 

@@ -14,23 +14,18 @@ my_dict={
 
 print("Original Dictionary:")
 print(my_dict)
+print("\n")
 
 print("copy dictionary:")
-copy=my_dict.copy()
-print(copy)
+dict2=my_dict.copy()
+print(dict2)
+print("\n")
 
-key_update='Rollno'
-key_val=202201619010141
-
-if key_update in my_dict:
-    my_dict[key_update]=key_val
-    print(f"updated {key_update} to {key_val}")
-else:
-    print(f"{key_update} Not Found")
-    print("Dictionary after update:")
-
-print("After updated:")
-print(my_dict)
+print("update dictionary:")
+my_dict['Rollno']="202201619010141"
+dict2.update(my_dict)
+print(dict2)
+print("\n")
 
 print("using get method to return value")
 result=my_dict.get('Name','Not Found')

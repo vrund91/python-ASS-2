@@ -18,22 +18,33 @@ ur_dict1={
     'Phone':phone
 }
 
-print("My dictionary:",my_dict.items())
-print("ur dictionary:",ur_dict1.items())
+print(my_dict.items())
+print("\n",ur_dict1.items())
 
-del_key='Blood' 
-if del_key in my_dict:
-    del my_dict[del_key]
-    print(f"After deleted:{del_key}.",my_dict)
+print("\n1.Delete")
+print("2.compare")
+print("3.remove")
+
+choice=int(input("Enter your choice:"))
+
+if choice == 1:
+    del_key=input("Enter key to delete:")
+    if del_key in my_dict:
+        del my_dict[del_key]
+        print(f"Deleted Successfully{del_key}.")
+        print(my_dict.items())
+    else:
+        print("key not found")
+
+elif choice == 2:
+    if my_dict == ur_dict1:
+        print("Both dictionary are equal")
+    else:
+        print("Dictionary are not equal")
+
+elif choice == 3:
+    ur_dict1.clear()
+    print("remove the dictionary")
+
 else:
-    print("Not found")
-
-print("My dictionary:",my_dict.items())
-
-if my_dict == ur_dict1:
-    print("Dictionary 1 and Dictionary 2 are equal")
-else:
-    print("Dictionary are not equal")
-
-ur_dict1.clear()
-print("Remove dictionary successfully")
+    print("Invalid choice")

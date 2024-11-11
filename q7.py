@@ -1,25 +1,36 @@
-user_input=(input("Enter a value:"))
+n=int(input("Enter a number:"))
+user_input= []
+for i in range(n):
+    number=int(input(f"Enter number {i+1}:"))
+    user_input.append(number)
 
-data=tuple(map(int,user_input.split(',')))   #map is a function  all items in a list (or any iterable)
+result=tuple(user_input)
+print(result)
+print("\n1.Max and min value from list.")
+print("2.Length of the list")
+print("3.Sorting a list")
+print("4.sum of a list")
 
-max_val=max(data)
+choice=int(input("Enter a your choice:"))
 
-min_val=min(data)
+if choice == 1:
+    max_val=max(result)
+    min_val=min(result)
+    print("Maxium and minimum value are:",max_val,min_val)
 
-len_val=len(data)
+elif choice == 2:
+    len_val=len(result)
+    print("length of value is:",len_val)
 
-sorted_val=tuple(sorted(data))
+elif choice == 3:
+    sorted_val=sorted(result)
+    print("sorted value is:",sorted_val)
 
-sum_val=sum(data)
+elif choice == 4:
+    #int_result=tuple(map(int,result))
+    sum_val=sum(result)
+    print("sum of list item:",sum_val)
 
-print(f"The original value is:{data}")
-
-print(f"The Maximum value is:{max_val}")
-
-print(f"The Minimum value is:{min_val}")
-
-print(f"The length of list:{len_val}")
-
-print(f"The sorted of list:{sorted_val}")
-
-print(f"The sum of list:{sum_val}")
+else:
+    print("Invalid choice")
+    

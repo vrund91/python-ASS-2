@@ -1,21 +1,27 @@
-user_input=(input("Enter a value:"))
-list1=[item.strip() for item in user_input.split(',')]
+list=['RED','BLUE','GREEN']
 
-print("original list")
-print(list1)
+print("original list:")
+print(list)
 
-append1=input("Enter a value:")
-list1.append(append1)
-print("using append method")
-print(list1)
+print("\n1.append")
+print("2.extend")
+print("3.sort")
 
-user_input=(input("Enter a value:"))
-list2=[item.strip() for item in user_input.split(',')]
+choice=int(input("Enter your choice:"))
 
-print("extend list:")
-list1.extend(list2)
-print(list1)
+if choice == 1:
+    value=input("Enter value to append in list:")
+    list.append(value)
+    print(list)
 
-result=sorted(list1)
-print("sorted list:")
-print(result)
+elif choice == 2:
+    list2=['1','2','3']
+    list.extend(list2)
+    print(list)
+
+elif choice == 3:
+    result=sorted(list)
+    print("sorted:",result)
+
+else:
+    print("Invalid choice")
